@@ -1,0 +1,17 @@
+# Dependencias y build
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Persistencia local del agente (no se publica en GitHub)
+AGENTS.md
+docs/
+
+# Editor / OS
+.DS_Store
