@@ -1,0 +1,150 @@
+@layer reset, theme, base, layout, components, utilities;
+
+@import './styles/tokens.css';
+
+@layer reset {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd,
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  ul[role='list'],
+  ol[role='list'] {
+    padding: 0;
+    list-style: none;
+  }
+
+  div,
+  header,
+  nav,
+  main,
+  footer,
+  section,
+  article,
+  aside,
+  ul,
+  ol,
+  li,
+  form,
+  fieldset,
+  button,
+  input,
+  textarea,
+  select,
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  figure,
+  blockquote,
+  pre,
+  code,
+  table,
+  th,
+  td {
+    box-sizing: border-box;
+  }
+
+  img,
+  picture,
+  svg,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    padding: 0;
+    background: none;
+    border: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light dark;
+    scrollbar-color: var(--color-text-mute) transparent;
+  }
+
+  body {
+    min-height: 100svh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--color-text);
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-mono);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
